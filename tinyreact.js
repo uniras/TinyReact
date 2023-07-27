@@ -159,40 +159,40 @@ if (!isNode) {
 
     //HTML Template
     let templateHTML = (`
-    <!DOCTYPE html>
-    <html lang="ja">
+      <!DOCTYPE html>
+      <html lang="ja">
 
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="${BootstrapCSSURL}" rel="stylesheet" />
-      <script type="module" src="./tinyreact.js"></script>
-      <title>Loading...</title>
-    </head>
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="${BootstrapCSSURL}" rel="stylesheet" />
+        <script type="module" src="./tinyreact.js"></script>
+        <title>Loading...</title>
+      </head>
 
-    <body>
-      <div id="loading" class="d-flex align-items-center justify-content-center" style="width:100vw; height:100vh;">
-        <span class="spinner-border" role="status"></span>
-        <span style="margin-left:5px;">Just a moment...</span>
-      </div>
-    </body>
+      <body>
+        <div id="loading" class="d-flex align-items-center justify-content-center" style="width:100vw; height:100vh;">
+          <span class="spinner-border" role="status"></span>
+          <span style="margin-left:5px;">Just a moment...</span>
+        </div>
+      </body>
 
-    </html>
-  `).replaceAll(/^    /mg, '').trim();
+      </html>
+    `).replaceAll(/^      /mg, '').trim();
 
     //tsx Template
     let templateTSX = (`
-    import React from 'react';
+      import React from 'react';
 
-    const ${argName} = () => {
-      return (
-        <>
-        </>
-      );
-    };
+      const ${argName} = () => {
+        return (
+          <>
+          </>
+        );
+      };
 
-    export default ${argName};
-  `).replaceAll(/^    /mg, '').trim();
+      export default ${argName};
+    `).replaceAll(/^      /mg, '').trim();
 
     //Check if the file to be generated already exists
     const fileCheck = (fileName) => {
